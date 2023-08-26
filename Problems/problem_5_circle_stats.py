@@ -5,14 +5,14 @@ Print the result to the user.
 
 
 def area(r):
-    pass
+    return 3.14 * r * r
 
 
 def circumference(r):
-    pass
+    return 2 * 3.14 * r
 
 
-radius = input("Circle radius: ")
+radius = float(input("Circle radius: "))
 
-print('Area: {}')  # <-- Call the area function and print the result
-print('Circumference: {}')  # <-- Call the circumference function and print
+print(f'Area: {area(radius)}')  # <-- Call the area function and print the result
+print(f'Circumference: {circumference(radius)}')  # <-- Call the circumference function and print
