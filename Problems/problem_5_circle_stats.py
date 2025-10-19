@@ -14,5 +14,7 @@ def circumference(r):
 
 radius = float(input("Circle radius: "))
 
-print(f'Area: {area(radius)}')  # <-- Call the area function and print the result
-print(f'Circumference: {circumference(radius)}')  # <-- Call the circumference function and print
+print(f"Area: {area(radius)}")  # <-- Call the area function and print the result
+print(
+    f"Circumference: {circumference(radius)}"
+)  # <-- Call the circumference function and print

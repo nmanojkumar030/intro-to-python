@@ -1,8 +1,8 @@
 print(f"'i' in 'team' is {'i' in 'team'}")
 print(f"'i' in 'win' is {'i' in 'win'}")
 
-print(f'isinstance(10, int) is {isinstance(10, int)}')
-print(f'isinstance(10.0, int) is {isinstance(10.0, int)}')
+print(f"isinstance(10, int) is {isinstance(10, int)}")
+print(f"isinstance(10.0, int) is {isinstance(10.0, int)}")
 
 print(f"'HELLO'.isupper() is {'HELLO'.isupper()}")
 print(f"'pAssW0rD1'.isalnum() is {'pAssW0rD1'.isalnum()}")

@@ -14,10 +14,10 @@ guess = int(input("I'm thinking of a number between 1 and 10: "))
 # If the number is correct, tell the user
 # Otherwise, tell them if the answer is higher or lower than their guess
 if answer == guess:
-    print('Congragulation!, you gussed it right.')
+    print("Congragulation!, you gussed it right.")
 elif guess < answer:
-    print('Number is lower')
+    print("Number is lower")
 elif guess > answer:
-    print('Number is higher')
+    print("Number is higher")
 
-print('The number was {}'.format(answer))
+print("The number was {}".format(answer))

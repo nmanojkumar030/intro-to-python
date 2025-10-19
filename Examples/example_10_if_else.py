@@ -1,4 +1,4 @@
-salutation = 'Hello world'
+salutation = "Hello world"
 shouting = False
 
 if shouting:
@@ -10,8 +10,8 @@ else:
 hungry = True
 
 if hungry:
-    print('Find something to eat')
-print('Continue your day')
+    print("Find something to eat")
+print("Continue your day")
 
 
 temp = int(input("What temperature is your water? "))
@@ -22,4 +22,3 @@ elif temp >= 100:
     print("It's boiling")
 else:
     print("It's just water")
-

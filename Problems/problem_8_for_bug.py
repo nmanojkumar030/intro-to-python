@@ -8,7 +8,7 @@ Find the bug.
 word = input("Type a word: ")
 num_vowels = 0
 
-vowels = 'aeiou'
+vowels = "aeiou"
 
 for letter in word.lower():
     if letter in vowels:

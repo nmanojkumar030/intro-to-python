@@ -1,4 +1,4 @@
-string = 'Hello world'
+string = "Hello world"
 
 print(string.upper())
 print(string.lower())
@@ -13,4 +13,4 @@ print(len(string))
 
 string_list = string.split()
 print(string_list)
-print('*'.join(string_list))
+print("*".join(string_list))

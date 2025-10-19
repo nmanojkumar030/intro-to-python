@@ -1,22 +1,22 @@
 import math
 
 
-print('hello world')
+print("hello world")
 
 print("hello world")
 
-print('hello \n world')
+print("hello \n world")
 
-name = 'world'
-print(f'hello {name}')
+name = "world"
+print(f"hello {name}")
 
 print(2 + 2)
 
 print(123 * 456)
 
-print(1/2)
+print(1 / 2)
 
-print(-123/456)
+print(-123 / 456)
 
 print(5 % 2)
 

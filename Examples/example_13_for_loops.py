@@ -20,4 +20,4 @@ for number in primes:
 
 # If you need to know the index, use enumerate()
 for i, number in enumerate(primes):
-    print(f'{i}: {number}')
+    print(f"{i}: {number}")

@@ -9,12 +9,12 @@ print()
 
 
 # Adding, removing, and updating
-movies = ['Blindspoting', 'Black Panther', 'Annihilation']
+movies = ["Blindspoting", "Black Panther", "Annihilation"]
 
-movies[0] = 'Blindspotting'
-movies.append('Sorry to Bother You')                # Adds item to end of list
-movies.insert(1, 'Won\'t You Be My Neighbour')      # Adds item to list at index
-movies.remove('Annihilation')
+movies[0] = "Blindspotting"
+movies.append("Sorry to Bother You")  # Adds item to end of list
+movies.insert(1, "Won't You Be My Neighbour")  # Adds item to list at index
+movies.remove("Annihilation")
 print(movies)
 
 
@@ -30,9 +30,7 @@ print(new_list)
 
 
 # Nested lists can be used for matrices
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 matrix[1][0] = 1000
 print(matrix)
