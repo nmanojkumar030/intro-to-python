@@ -1,18 +1,18 @@
 """
-Refactored word guessing game that gets a random word from the file 'words.txt'
+Word guess refactored to use list comprehensions, perform input validation,
+and test functions.
+
+display_word uses a list comprehension.
+get_guess does some validation.
+Tests are in challenge_3e_word_guess_tests.py
 """
+
 import random
 
 
 def display_word(word, guessed_letters):
-    displayed_word = ''
-    for letter in word:
-        if letter in guessed_letters:
-            displayed_word += letter
-        else:
-            displayed_word += '_'
-        displayed_word += ' '
-    return displayed_word
+    letters = [letter if letter in guessed_letters else "_" for letter in word]
+    return " ".join(letters)
 
 
 def guess_is_correct(guess, word):
@@ -30,6 +30,12 @@ def game_lost(guesses_left):
     return guesses_left == 0
 
 
+def get_guess():
+    guess = input("Guess a letter: ")
+    valid = len(guess) == 1 and guess.isalpha()
+    return guess.lower(), valid
+
+
 def word_game(word):
     word = word.lower()
     guessed_letters = []
@@ -39,19 +45,20 @@ def word_game(word):
         # Display current state of the game
         print(display_word(word, guessed_letters))
         print(f'Guessed letters: {" ".join(guessed_letters)}')
-        print(f'Guesses left: {wrong_guesses_left}\n')
+        print(f"Guesses left: {wrong_guesses_left}\n")
 
         # Get a guess from the user
-        guess = input('Guess a letter: ')
-        print()
+        guess, valid = get_guess()
+        if not valid:
+            print("Invalid guess. Please enter a single letter")
 
         # Handle the user's guess
         guessed_letters.append(guess)
         if guess_is_correct(guess, word):
-            print('Correct!')
+            print("Correct!")
         else:
             wrong_guesses_left -= 1
-            print('Nope!')
+            print("Nope!")
 
         # Check to see if they won or lost
         if game_won(word, guessed_letters):
@@ -62,7 +69,8 @@ def word_game(word):
             return
 
 
-with open('words.txt', 'r') as file:
+# Choose a random word
+with open("words.txt", "r") as file:
     words = file.readlines()
     answer = random.choice(words).strip()
 

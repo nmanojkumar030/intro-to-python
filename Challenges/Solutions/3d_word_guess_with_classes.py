@@ -15,12 +15,13 @@ In this case, display_word is a method that acts like a property
 because it uses a property decorator (@property), so it can be accessed
 by calling self.display_word, not self.display_word() <- no parentheses.
 """
+
 import random
 
 
 # Choose a random word
 def random_word():
-    with open('words.txt', 'r') as file:
+    with open("words.txt", "r") as file:
         words = file.readlines()
         word = random.choice(words).strip()
     return word
@@ -34,13 +35,13 @@ class WordGame(object):
 
     @property
     def display_word(self):
-        displayed_word = ''
+        displayed_word = ""
         for letter in self.word:
             if letter in self.guessed_letters:
                 displayed_word += letter
             else:
-                displayed_word += '_'
-            displayed_word += ' '
+                displayed_word += "_"
+            displayed_word += " "
         return displayed_word
 
     def guess_is_correct(self, guess):
@@ -60,19 +61,19 @@ class WordGame(object):
             # Display current state of the game
             print(self.display_word)
             print(f'Guessed letters: {" ".join(self.guessed_letters)}')
-            print(f'Guesses left: {self.wrong_guesses_left}\n')
+            print(f"Guesses left: {self.wrong_guesses_left}\n")
 
             # Get a guess from the user
-            guess = input('Guess a letter: ')
+            guess = input("Guess a letter: ")
             print()
 
             # Handle the user's guess
             self.guessed_letters.append(guess)
             if self.guess_is_correct(guess):
-                print('Correct!')
+                print("Correct!")
             else:
                 self.wrong_guesses_left -= 1
-                print('Nope!')
+                print("Nope!")
 
             # Check to see if they won or lost
             if self.game_won():

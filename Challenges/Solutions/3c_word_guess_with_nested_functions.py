@@ -3,6 +3,7 @@ Word guess game refactored so to use nested functions.
 The inner functions can use variables from the outer function's scope.
 You no longer have to pass 'word' and 'guessed_letters' around.
 """
+
 import random
 
 
@@ -12,13 +13,13 @@ def word_game(word):
     wrong_guesses_left = 6
 
     def display_word():
-        displayed_word = ''
+        displayed_word = ""
         for letter in word:
             if letter in guessed_letters:
                 displayed_word += letter
             else:
-                displayed_word += '_'
-            displayed_word += ' '
+                displayed_word += "_"
+            displayed_word += " "
         return displayed_word
 
     def guess_is_correct(letter):
@@ -37,19 +38,19 @@ def word_game(word):
         # Display current state of the game
         print(display_word())
         print(f'Guessed letters: {" ".join(guessed_letters)}')
-        print(f'Guesses left: {wrong_guesses_left}\n')
+        print(f"Guesses left: {wrong_guesses_left}\n")
 
         # Get a guess from the user
-        guess = input('Guess a letter: ')
+        guess = input("Guess a letter: ")
         print()
 
         # Handle the user's guess
         guessed_letters.append(guess)
         if guess_is_correct(guess):
-            print('Correct!')
+            print("Correct!")
         else:
             wrong_guesses_left -= 1
-            print('Nope!')
+            print("Nope!")
 
         # Check to see if they won or lost
         if game_won():
@@ -61,7 +62,7 @@ def word_game(word):
 
 
 # Choose a random word
-with open('words.txt', 'r') as file:
+with open("words.txt", "r") as file:
     words = file.readlines()
     answer = random.choice(words).strip()
 
